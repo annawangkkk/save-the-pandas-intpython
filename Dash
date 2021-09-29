@@ -1,0 +1,24 @@
+# draft code
+import dash
+import dash_bootstrap_components as dbc
+import dash_html_components as html
+
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+
+app.layout = html.Div(
+    dbc.Button("Save the Pandas", color="success", className="mr-1")
+)
+
+if __name__ == "__main__":
+    app.run_server()
+
+#input search box
+#dropdown (5 categories)
+#Callback, connect between the pandas dataframe data to the interactive map; Connect dash to API
+
+#Search box, input longitute & latitude
+app.layout = html.Div([
+    html.Div([
+        dcc.Input(
+            id='my_txt_input',
+            type='number',
